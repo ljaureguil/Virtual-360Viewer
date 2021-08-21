@@ -1,0 +1,44 @@
+<html>
+<style>
+body{
+    background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5E_70W9gfPbjRLdF4bR2qrHZnlo1FbAo0993cD2E7pHz_NW-PTQ);
+    background-size:100% 100%;
+}
+#iff{
+    width:100%;
+    height:50%;
+    background:rgba(255,255,255,.5);
+}
+
+</style>
+<iframe id="iff"></iframe>
+<script>
+
+       var eiff = document.getElementById("iff");
+     var wt = loadDoc('https://raw.githubusercontent.com/ljaureguil/LJL-Virtual/master/experimento%204%2010%2019.html');
+     wt = wt.toString();
+     alert(wt);
+     setTimeout(function() {
+         eiff.contentWindow.document.open();
+         eiff.contentWindow.document.write(wt);
+         eiff.contentWindow.document.close();
+     }, 1000);
+     
+ function loadDoc(url) {
+  var xhttp = new XMLHttpRequest();
+  
+  xhttp.open("GET", url, false);
+  xhttp.send();
+//  var xx=xhttp.responseXML;
+ // alert("...................\n\n"+xx);
+ // var a=xx.getElementById("style");
+//  var b=a[0].innerHTML;
+//  alert(a.length);
+   return xhttp.responseText;
+//  return xhttp.responseXML;  
+
+
+}   
+</script>
+</html>
+        
